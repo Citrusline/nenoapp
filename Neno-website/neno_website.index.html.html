@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neno - Die smarte Hunde-App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #008c8c;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .hero {
+            text-align: center;
+            background-color: #f2f2f2;
+            padding: 50px 20px;
+        }
+        .hero h1 {
+            color: #008c8c;
+            font-size: 36px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+        .hero button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #008c8c;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .features, .about, .newsletter {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .features h2, .about h2, .newsletter h2 {
+            color: #008c8c;
+            margin-bottom: 20px;
+        }
+        .features div, .newsletter form {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .features div p, .about p {
+            max-width: 300px;
+            margin: 10px;
+        }
+        .newsletter input, .newsletter button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 5px;
+        }
+        .newsletter input {
+            width: 200px;
+        }
+        .newsletter button {
+            background-color: #008c8c;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #008c8c;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
+            nav a {
+                font-size: 16px;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 24px;
+            }
+            .hero p {
+                font-size: 14px;
+            }
+            .newsletter input {
+                width: 100%;
+            }
+        }
+    </style>
+    <script>
+        function simulateNewsletterSubmission(event) {
+            event.preventDefault();
+            const name = document.querySelector('input[name="name"]').value;
+            const email = document.querySelector('input[name="email"]').value;
+            alert(`Vielen Dank, ${name}! Deine E-Mail (${email}) wurde erfolgreich registriert.`);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="Transparent Logo.png" alt="Neno Logo" height="50">
+        <nav>
+            <a href="#features">Funktionen</a>
+            <a href="#about">Über uns</a>
+            <a href="#newsletter">Newsletter</a>
+            <a href="#agb">AGB</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>Neno – Die smarte Hunde-App</h1>
+        <p>Erhalte Antworten, Tipps und Unterstützung für dich und deinen Hund – jederzeit und überall.</p>
+        <button>App entdecken</button>
+    </section>
+    <section class="features" id="features">
+        <h2>Funktionen</h2>
+        <div>
+            <p><strong>Wertvolle Tipps:</strong> Erhalte nützliche Tipps für eine harmonische Beziehung zu deinem Hund.</p>
+            <p><strong>Ask-Neno:</strong> Stelle KI Fragen zu Verhalten, Training oder Pflege – erhalte Antworten in Echtzeit.</p>
+            <p><strong>Ask Trainer:</strong> Chatte mit professionellen Hundetrainern oder buche Trainingseinheiten.</p>
+            <p><strong>Ask Doc:</strong> Online-Beratung für die Gesundheit deines Hundes – per Chat oder Termin.</p>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <h2>Über uns</h2>
+        <p>Die Neno App ist eine Entwicklung von Citrusline GmbH. Inspiriert durch unseren Hund Moreno – liebevoll „Neno“ genannt – haben wir eine Plattform geschaffen, die Hundebesitzern den Alltag erleichtert. Unsere Mission ist es, das Leben von Hund und Halter gleichermaßen zu bereichern – einfach, praktisch und auf einen Klick.</p>
+    </section>
+    <section class="newsletter" id="newsletter">
+        <h2>Newsletter & Early Access</h2>
+        <form onsubmit="simulateNewsletterSubmission(event)">
+            <input type="text" name="name" placeholder="Dein Name" required>
+            <input type="email" name="email" placeholder="Deine E-Mail" required>
+            <button type="submit">Jetzt registrieren</button>
+        </form>
+    </section>
+    <footer id="agb">
+        <p>© 2024 Citrusline GmbH. Alle Rechte vorbehalten. <a href="#">AGB</a></p>
+    </footer>
+</body>
+</html>
